@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:paddingTop="16dp">
+
+    <!-- Include other widget or layout tags here. These are considered
+            "child views" or "children" of the linear layout -->
+
+    <TextView
+        android:id="@+id/nametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" Nama Burung "
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/latinnametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text=" NamaLatin"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/familynametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Family : "
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/ordonametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Ordo : "
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/habitattext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Habitat Asli : "
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/makanantext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Makanan : "
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/deskripsitext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:text="Deskripsi : "
+        android:textSize="15sp" />
+
+
+
+
+</LinearLayout>
