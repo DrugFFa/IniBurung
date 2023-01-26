@@ -98,9 +98,10 @@ class MainActivity : AppCompatActivity() {
             )
             val (nama, desc, latin, family, ordo, habitat, makanan) = listData[maxPos]
             mainBinding.result.text = nama
-            mainBinding.result1.text = desc
+            mainBinding.result2.text = desc
             mainBinding.button3.setOnClickListener {
                 val intent = Intent(this, ResultActivity::class.java)
+                val image = Bitmap.createScaledBitmap(image!!, imageSize, imageSize, false)
                 intent.putExtra("nama", nama)
                 intent.putExtra("desc", desc)
                 intent.putExtra("family",family)
@@ -108,6 +109,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("habitat", habitat)
                 intent.putExtra("latin", latin)
                 intent.putExtra("makanan", makanan)
+                intent.putExtra("gambar", image)
                 startActivity(intent)
             }
 

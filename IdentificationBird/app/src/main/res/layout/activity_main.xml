@@ -64,7 +64,7 @@
         android:textColor="#C30000"
         android:textStyle="bold"
         android:textSize="27sp"
-        android:id="@+id/result1"
+        android:id="@+id/result2"
         android:layout_below="@+id/result"
         />
     <Button
@@ -77,7 +77,7 @@
         android:textSize="21sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/result1"
+        android:layout_below="@+id/result2"
         />
 
 </RelativeLayout>
