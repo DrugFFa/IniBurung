@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding.button.setOnClickListener(View.OnClickListener {
             if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                 val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+
                 startActivityForResult(cameraIntent, 3)
             } else {
                 requestPermissions(arrayOf(Manifest.permission.CAMERA), 100)
@@ -96,12 +97,12 @@ class MainActivity : AppCompatActivity() {
                 "ROSY FACED LOVEBIRD",
                 "VICTORIA CROWNED PIGEON"
             )
-            val (nama, desc, latin, family, ordo, habitat, makanan) = listData[maxPos]
+            val (nama, desc, latin, family, ordo, habitat, makanan, gambar) = listData[maxPos]
             mainBinding.result.text = nama
             mainBinding.result2.text = desc
-            mainBinding.button3.setOnClickListener {
+            mainBinding.button4.setOnClickListener {
                 val intent = Intent(this, ResultActivity::class.java)
-                val image = Bitmap.createScaledBitmap(image!!, imageSize, imageSize, false)
+
                 intent.putExtra("nama", nama)
                 intent.putExtra("desc", desc)
                 intent.putExtra("family",family)
@@ -109,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("habitat", habitat)
                 intent.putExtra("latin", latin)
                 intent.putExtra("makanan", makanan)
-                intent.putExtra("gambar", image)
+                intent.putExtra("gambar", gambar)
                 startActivity(intent)
             }
 
@@ -125,10 +126,12 @@ class MainActivity : AppCompatActivity() {
             if (requestCode == 3) {
                 var image = data!!.extras!!["data"] as Bitmap?
                 val dimension = Math.min(image!!.width, image.height)
+                val dataPhoto = data?.data
                 image = ThumbnailUtils.extractThumbnail(image, dimension, dimension)
                 mainBinding.imageView!!.setImageBitmap(image)
                 image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false)
                 classifyImage(image)
+
             } else {
                 val dat = data!!.data
                 var image: Bitmap? = null

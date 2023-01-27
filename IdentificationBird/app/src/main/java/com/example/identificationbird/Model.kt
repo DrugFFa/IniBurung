@@ -8,5 +8,6 @@ data class Model (
     var ordo: String = "",
     var habitat : String = "",
     var makanan : String = "",
+    var gambar : Int = 0
 
 )

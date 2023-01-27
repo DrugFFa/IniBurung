@@ -25,6 +25,18 @@ object Data {
         "penjelasan 8",
     )
 
+    private val photoBird= intArrayOf(
+        R.drawable.crownedp,
+        R.drawable.etdove,
+        R.drawable.mourdove,
+        R.drawable.nico,
+        R.drawable.rockdove,
+        R.drawable.rdlovebird,
+        R.drawable.rdlovebird,
+        R.drawable.victoriap
+
+    )
+
     private val birdFamily = arrayOf(
         "Columbidae",
         "Columbidae",
@@ -92,6 +104,7 @@ object Data {
                 bird.ordo = birdOrdo[position]
                 bird.habitat = birdHabitat[position]
                 bird.makanan = birdFood[position]
+                bird.gambar = photoBird[position]
                 list.add(bird)
             }
 
